@@ -10,8 +10,9 @@ import javax.persistence.*;
 public class ProductItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     /*商品规格id*/
-    private Integer id;
+    private Integer itemId;
     /*商品id*/
     private Integer productId;
     /*规格名称*/
@@ -27,15 +28,14 @@ public class ProductItem {
     /*编码*/
     private String productNum;
     /*规格图片*/
-    private String itemIamgeUrl;
+    private String itemImageUrl;
 
-
-    public Integer getId() {
-        return id;
+    public Integer getItemId() {
+        return itemId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
     }
 
     public Integer getProductId() {
@@ -94,11 +94,11 @@ public class ProductItem {
         this.productNum = productNum;
     }
 
-    public String getItemIamgeUrl() {
-        return itemIamgeUrl;
+    public String getItemImageUrl() {
+        return itemImageUrl;
     }
 
-    public void setItemIamgeUrl(String itemIamgeUrl) {
-        this.itemIamgeUrl = itemIamgeUrl;
+    public void setItemImageUrl(String itemImageUrl) {
+        this.itemImageUrl = itemImageUrl;
     }
 }

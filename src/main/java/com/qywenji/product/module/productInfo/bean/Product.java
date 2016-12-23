@@ -11,8 +11,9 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     /*商品id*/
-    private Integer id;
+    private Integer productId;
     /*商品名*/
     private String productName;
     /*商品短名*/
@@ -24,11 +25,11 @@ public class Product {
     /*商品单价*/
     private Float price;
     /*商品打折价*/
-    private Float discoutPrice;
+    private Float discountPrice;
     /*商品描述*/
     private String description;
     /*店铺id*/
-    private Integer webstoreId;
+    private Integer shopId;
     /*商品创建时间*/
     private Date createTime;
     /*商品最后更新时间*/
@@ -38,7 +39,7 @@ public class Product {
     /*商品送货提示（预留字段）*/
     private String deliveryTip;
     /*商品类型*/
-    private Integer prodcutTypeId;
+    private Integer productTypeId;
     /*商品品牌名（预留字段）*/
     private String brandName;
 
@@ -46,13 +47,12 @@ public class Product {
 
     private String longDescription;
 
-
-    public Integer getId() {
-        return id;
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     public String getProductName() {
@@ -95,28 +95,12 @@ public class Product {
         this.price = price;
     }
 
-    public Float getDiscoutPrice() {
-        return discoutPrice;
-    }
-
-    public void setDiscoutPrice(Float discoutPrice) {
-        this.discoutPrice = discoutPrice;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Integer getWebstoreId() {
-        return webstoreId;
-    }
-
-    public void setWebstoreId(Integer webstoreId) {
-        this.webstoreId = webstoreId;
     }
 
     public Date getCreateTime() {
@@ -151,14 +135,6 @@ public class Product {
         this.deliveryTip = deliveryTip;
     }
 
-    public Integer getProdcutTypeId() {
-        return prodcutTypeId;
-    }
-
-    public void setProdcutTypeId(Integer prodcutTypeId) {
-        this.prodcutTypeId = prodcutTypeId;
-    }
-
     public String getBrandName() {
         return brandName;
     }
@@ -181,5 +157,29 @@ public class Product {
 
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
+    }
+
+    public Float getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void setDiscountPrice(Float discountPrice) {
+        this.discountPrice = discountPrice;
+    }
+
+    public Integer getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(Integer shopId) {
+        this.shopId = shopId;
+    }
+
+    public Integer getProductTypeId() {
+        return productTypeId;
+    }
+
+    public void setProductTypeId(Integer productTypeId) {
+        this.productTypeId = productTypeId;
     }
 }
