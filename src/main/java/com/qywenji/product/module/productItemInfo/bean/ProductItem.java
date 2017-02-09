@@ -11,6 +11,7 @@ public class ProductItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
+    private Integer id;
     /*商品规格id*/
     private Integer itemId;
     /*商品id*/
@@ -29,6 +30,14 @@ public class ProductItem {
     private String productNum;
     /*规格图片*/
     private String itemImageUrl;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Integer getItemId() {
         return itemId;

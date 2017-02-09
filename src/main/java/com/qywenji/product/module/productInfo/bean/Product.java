@@ -12,6 +12,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
+    private Integer id;
     /*商品id*/
     private Integer productId;
     /*商品名*/
@@ -33,7 +34,7 @@ public class Product {
     /*商品创建时间*/
     private Date createTime;
     /*商品最后更新时间*/
-    private Date lastUpdateTime = new Date();
+    private Date lastUpdateTime;
     /*商品供应商id*/
     private Integer mid;
     /*商品送货提示（预留字段）*/
@@ -46,6 +47,14 @@ public class Product {
     private String largeImageUrl;
 
     private String longDescription;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Integer getProductId() {
         return productId;

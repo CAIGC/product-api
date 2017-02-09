@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 public class ProductDao extends BaseDao<Product> {
 
 
-
-
+    public Product getByProductId(Integer productId) {
+       String hql = "from Product where productId = ?";
+        return super.get(hql,productId);
+    }
 }

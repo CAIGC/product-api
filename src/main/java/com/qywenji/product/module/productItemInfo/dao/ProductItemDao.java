@@ -9,4 +9,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class ProductItemDao extends BaseDao<ProductItem> {
+
+
+    public void delByProductId(Integer productId) {
+        String sql = "delete from product_item where product_id=:productId";
+        super.currentSession().createSQLQuery(sql).setParameter("productId",productId).executeUpdate();
+    }
 }
