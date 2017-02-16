@@ -15,4 +15,9 @@ public class ProductItemDao extends BaseDao<ProductItem> {
         String sql = "delete from product_item where product_id=:productId";
         super.currentSession().createSQLQuery(sql).setParameter("productId",productId).executeUpdate();
     }
+
+    public ProductItem getByItemId(Integer itemId) {
+        String hql = "from ProductItem where itemId = ?";
+        return super.get(hql,itemId);
+    }
 }

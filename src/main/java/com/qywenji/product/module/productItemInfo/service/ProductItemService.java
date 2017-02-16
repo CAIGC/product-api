@@ -18,4 +18,8 @@ public class ProductItemService extends BaseService<ProductItem> {
     public void delByProductId(Integer productId) {
         productItemDao.delByProductId(productId);
     }
+
+    public ProductItem getByItemId(Integer itemId){
+        return productItemDao.getByItemId(itemId);
+    }
 }
